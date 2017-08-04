@@ -1,9 +1,9 @@
 {
-  "name": "heavy-lifting",
+  "name": "Mercetplace",
   "description": "",
-  "sitename" : "Heavy-lifting",
-  "website" : "https://heavy-lifting.herokuapp.com/",
-  "repo" : "https://github.com/Isithelo/heavy-lifting",
+  "sitename" : "Mercetplace",
+  "website" : "https://mercetplace.ngrok.io",
+  "repo" : "https://github.com/Raltrwx/mercetplace2",
   "scripts": {
   },
   "env": {

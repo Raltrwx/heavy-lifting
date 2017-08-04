@@ -1,7 +1,7 @@
 {
-  "name": "heavy-lifting",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "mercetplace",
+  "version": "0.0.4",
+  "description": "An Albion Online mercenary marketplace using Express 4",
   "engines": {
     "node": "6.11.1"
   },

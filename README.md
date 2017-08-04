@@ -7,10 +7,10 @@
  
  </div>
 <h1> 
-Heavy-lifting is a design platform for Engineers.
+Mercetplace
 </h1>
 <h3> 
-Use Heavy-lifting to build, design and create projects, support your business, and work together on <strong>open source </strong> engineering databases.
+>Mercetplace is a platform based off of heavy-lifting which is a standalone copy of the GitHub user management system. Designed using a mongodB, NodeJS, expressjs and Handlebarsjs MVC (model view controller)
 </h3>
  
 
@@ -57,6 +57,34 @@ Included in this is vast amounts of duplication and erroneous mistakes that are 
   <li>serve-favicon</li>
   <li>express</li>
 </ul>
+
+<h3>Development</h3>
+Gitflow workflow is used, clone the develop branch and merge/pr any work in please.
+
+<h3>Installation Instructions</h3>
+<p>If you would like to install or contribute to Mercetplace, your local development machine requirements are the following components:</p>
+
+<pre>
+Node.js
+MongodB
+The GitHub Fraternate repo
+NPM
+expressjs
+</pre>
+<h3>In more detail.</h3>
+
+<h3>Arch Linux</h3>
+<pre>
+* Install NPM & MongoDB
+* npm install -g nodemon
+* Clone the repo
+* Create your own .env file or get it from Raltrwx
+* Install the mongodb package
+* run: systemctl start mongodb && systemctl enable mongodb
+* cd to the repo folder in terminal
+* nodemon
+* open localhost:5000
+</pre>
 
 <p>In more detail.</p>
 

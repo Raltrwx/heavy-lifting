@@ -20,6 +20,7 @@ dotenv.load();
 var initController = require('./controllers/initialize');
 var HomeController = require('./controllers/home');
 var userController = require('./controllers/user');
+var contractController = require('./controllers/contract');
 var contactController = require('./controllers/contact');
 var adminController = require('./controllers/admin');
 var userInterfaceController = require('./controllers/userinterface');
@@ -303,6 +304,22 @@ app.get('/orguserread', organizationController.orguserread); // Get the active u
 
 app.get('/organizations/:orgname/components', organizationController.ajaxorguserread ,organizationController.components);
 app.get('/organizations/:orgname/assemblies',organizationController.ajaxorguserread , organizationController.assemblies);
+
+/////////////////////////////////////
+////       CONTRACTS            //// Need work here
+///////////////////////////////////
+//Static
+app.get('/contracts', contractController.contlist);
+app.get('/contracts/new', contractController.newcont);
+app.post('/contracts/new', contractController.createcontstatic);
+
+// Most likely next needed Contract functions //
+
+// This is what routes the display of an individual page for a contract, need to make this entire thing work. Refer to line#205 for how organizations do it and trace the logic 
+app.get('/contracts/:conttitle/', contractController.ajaxcontuserread, contractController.contowneruserdetail)
+//app.get('/organizations/:contname/', contractController.ajaxorguserread ,  contractController.organizationpermission,  contractController.orgowneruserdetail,  contractController.orgprofile);
+
+// Breaks application: app.put('/contracts/:conttitle', userController.ensureAuthenticated, organizationController.organizationpermission, contractController.contPut);
 
 
 ///////////////////////////////////

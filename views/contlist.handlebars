@@ -1,0 +1,92 @@
+ <h1>Contract List</h1>
+ <p>Here is a list of all of the contracts on the site.</p>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+
+ <table class="table table-bordered" id="contract">
+  <thead>
+    <tr>
+      <th>All Contracts</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each username}}
+    <tr>
+      <td>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              {{#if this.entry.picture}}
+              <div class="media-left media-middle">
+                <a href="#">
+                  <a href="/contracts/{{this.entry.title}}">
+                    <img onerror="this.src='{{this.gravatar}}'" src="{{this.entry.picture}}" class="media-object" style="max-width: 65px;border-radius: 2px;border: 1px;border-color: #d8d8d8;border-style: solid;">
+                  </a>
+                </a>
+              </div>
+              {{else}}
+              <div class="media-left media-middle">
+                <a href="#">
+                  <a href="/contracts/{{this.entry.title}}">
+                    <img src="{{this.gravatar}}" class="media-object" style="max-width: 65px;border-radius: 2px;border: 1px;border-color: #d8d8d8;border-style: solid;">
+                  </a>
+                </a>
+              </div>
+              {{/if}}
+            </a>
+          </div>
+          <div class="media-body">
+            <div class="row">
+              <div class="col-md-3">
+                {{#if this.entry.displayname}}
+                <a href="/contracts/{{this.entry.title}}"><h4>{{this.entry.displaytitle}}</h4></a>
+                {{else}}
+                <a href="/contracts/{{this.entry.title}}"><h4>{{this.entry.title}}</h4></a>
+                {{/if}}
+                {{#if this.entry.organization}}
+                Organization: <a style="color:grey" href="organizations/{{this.entry.organization}}">{{this.entry.organization}}</a>
+                {{/if}}
+                {{#if this.entry.owner}}
+                 Owned by : <a style="color:grey" href="/users/{{this.entry.owner}}">{{this.entry.owner}}</a>
+                {{/if}}
+              </div>
+              <div class="col-md-9">
+                {{dotdotdotdot this.entry.description}}
+                {{#if this.entry.url}}
+                <p style="text-align: right;">
+                  <a href="{{this.entry.url}}" target="_blank">url</a>
+                </p>  
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </td>
+</td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+
+
+  </div>
+</div>
+
+
+
+ 
+<script type="text/javascript">
+////////////////////////////////////
+////        INITIALIZE         //// 
+//////////////////////////////////
+$('document').ready(function(){
+  var table = jQuery('#contract').DataTable({
+    'destroy':true,
+    "pagingType": "numbers"
+  //  'order': [[ 2, 'asc' ]] ,
+});
+})
+</script>
