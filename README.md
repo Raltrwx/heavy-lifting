@@ -79,8 +79,9 @@ expressjs
 * npm install -g nodemon
 * Clone the repo
 * Create your own .env file or get it from Raltrwx
-* Install the mongodb package
+* Install the mongodb & mongodb-tools package
 * run: systemctl start mongodb && systemctl enable mongodb
+* cd to import mongo data & mongoimports -d heavylifting demodata.json
 * cd to the repo folder in terminal
 * nodemon
 * open localhost:5000
